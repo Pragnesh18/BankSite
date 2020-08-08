@@ -1,10 +1,10 @@
 <?php
-$servername = "localhost";
+$servername = "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 // Enter your MySQL username below(default=root)
-$username = "root";
+$username = "u4cxbq0r8w07fyve";
 // Enter your MySQL password below
-$password = "";
-$dbname = "net_banking";
+$password = "kisul6owdrdo2vy0";
+$dbname = "w7s0qi7si2yzx33z";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
