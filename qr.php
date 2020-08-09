@@ -46,7 +46,7 @@ if(isset($_POST['cust_uname']))
 	
 	$sql1 = "UPDATE customer set random = $rand WHERE uname='".$username."' AND pwd='".$password."' ";
 	$res = mysqli_query($conn , $sql1);
-	QRcode::png($rand, 'test.png', 'L', 4, 2);
+	QRcode::png($rand);
 	echo "Last line of PHP";
 ?>
 
