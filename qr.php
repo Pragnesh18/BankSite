@@ -28,7 +28,7 @@
 include "connect.php";
 include "qrlib\qrlib.php";
 
-echo "Inside PHP"
+echo "Inside PHP";
 
 if(isset($_POST['cust_uname']))
 {
@@ -47,8 +47,9 @@ if(isset($_POST['cust_uname']))
 	$sql1 = "UPDATE customer set random = $rand WHERE uname='".$username."' AND pwd='".$password."' ";
 	$res = mysqli_query($conn , $sql1);
 	QRcode::png($rand, 'test.png', 'L', 4, 2);
-	echo "Last line of PHP"
+	echo "Last line of PHP";
 ?>
+
 </div>
 				<div style="text-align: center">
 				
