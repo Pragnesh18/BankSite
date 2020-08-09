@@ -22,11 +22,13 @@
                     <div class="flex-item-login">
                         <h2>Welcome</h2>
                     </div>
-	<div>				
+	<div>	
+
 <?php
 include "connect.php";
 include "qrlib\qrlib.php";
 
+echo "Inside PHP"
 
 if(isset($_POST['cust_uname']))
 {
@@ -35,7 +37,8 @@ if(isset($_POST['cust_uname']))
 	session_start();
 	$username = $_SESSION['uname'];
     $password = $_SESSION['password'];
-
+    echo "Username: $username ";
+    echo "Password: $password ";
     $sql0 =  "SELECT imei FROM customer WHERE uname='".$username."' AND pwd='".$password."'";
     $result = $conn->query($sql0);
     $row = $result->fetch_assoc();
@@ -44,7 +47,7 @@ if(isset($_POST['cust_uname']))
 	$sql1 = "UPDATE customer set random = $rand WHERE uname='".$username."' AND pwd='".$password."' ";
 	$res = mysqli_query($conn , $sql1);
 	QRcode::png($rand, 'test.png', 'L', 4, 2);
-	
+	echo "Last line of PHP"
 ?>
 </div>
 				<div style="text-align: center">
