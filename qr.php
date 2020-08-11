@@ -26,7 +26,7 @@
 
 <?php
 include "connect.php";
-include "qrlib/qrlib.php";
+include "qrlib\qrlib.php";
 
 echo "Inside PHP";
 
